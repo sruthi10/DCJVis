@@ -1,0 +1,32 @@
+DCJ distance of the genomes "Genome A" & "Genome B" = 8
+DCJ sorting scenario of the genomes "Genome A" & "Genome B":
+0.:  -CaJ7.0001 CaJ7.0003 -CaJ7.0009 CaJ7.0004 -CaJ7.0005 -CaJ7.0007 CaJ7.0013 -CaJ7.0011 CaJ7.0018 -CaJ7.0015 -CaJ7.0017 | 
+1.:  -CaJ7.0001 -CaJ7.0003 -CaJ7.0009 CaJ7.0004 -CaJ7.0005 -CaJ7.0007 CaJ7.0013 -CaJ7.0011 CaJ7.0018 -CaJ7.0015 -CaJ7.0017 | 
+2.:  -CaJ7.0001 -CaJ7.0003 CaJ7.0004 -CaJ7.0005 -CaJ7.0007 CaJ7.0013 -CaJ7.0011 CaJ7.0018 -CaJ7.0015 -CaJ7.0017 | -CaJ7.0009 ) 
+3.:  -CaJ7.0001 -CaJ7.0003 CaJ7.0004 -CaJ7.0005 -CaJ7.0007 -CaJ7.0009 CaJ7.0013 -CaJ7.0011 CaJ7.0018 -CaJ7.0015 -CaJ7.0017 | 
+4.:  -CaJ7.0001 -CaJ7.0003 CaJ7.0004 -CaJ7.0005 -CaJ7.0007 -CaJ7.0009 -CaJ7.0011 CaJ7.0018 -CaJ7.0015 -CaJ7.0017 | -CaJ7.0013 ) 
+5.:  -CaJ7.0001 -CaJ7.0003 CaJ7.0004 -CaJ7.0005 -CaJ7.0007 -CaJ7.0009 -CaJ7.0011 -CaJ7.0013 CaJ7.0018 -CaJ7.0015 -CaJ7.0017 | 
+6.:  -CaJ7.0001 -CaJ7.0003 CaJ7.0004 -CaJ7.0005 -CaJ7.0007 -CaJ7.0009 -CaJ7.0011 -CaJ7.0013 -CaJ7.0015 -CaJ7.0017 | CaJ7.0018 ) 
+7.:  -CaJ7.0001 -CaJ7.0003 CaJ7.0004 -CaJ7.0005 -CaJ7.0007 -CaJ7.0009 -CaJ7.0011 -CaJ7.0013 -CaJ7.0015 CaJ7.0017 | CaJ7.0018 ) 
+8.:  -CaJ7.0001 -CaJ7.0003 CaJ7.0004 -CaJ7.0005 -CaJ7.0007 -CaJ7.0009 -CaJ7.0011 -CaJ7.0013 -CaJ7.0015 CaJ7.0017 CaJ7.0018 | 
+This is only one of at least 4782969 sorting sequences.
+
+
+DCJ sorting scenario of the genomes "Genome A" & "Genome B":
+0.:  { (CaJ7.0001_t), (CaJ7.0001_h, CaJ7.0003_h), (CaJ7.0003_t, CaJ7.0009_t), (CaJ7.0009_h, CaJ7.0004_h), (CaJ7.0004_t, CaJ7.0005_t), (CaJ7.0005_h, CaJ7.0007_t), (CaJ7.0007_h, CaJ7.0013_h), (CaJ7.0013_t, CaJ7.0011_t), (CaJ7.0011_h, CaJ7.0018_h), (CaJ7.0018_t, CaJ7.0015_t), (CaJ7.0015_h, CaJ7.0017_t), (CaJ7.0017_h) }
+1.:  { (CaJ7.0001_t), (CaJ7.0001_h, CaJ7.0003_t), (CaJ7.0003_h, CaJ7.0009_t), (CaJ7.0009_h, CaJ7.0004_h), (CaJ7.0004_t, CaJ7.0005_t), (CaJ7.0005_h, CaJ7.0007_t), (CaJ7.0007_h, CaJ7.0013_h), (CaJ7.0013_t, CaJ7.0011_t), (CaJ7.0011_h, CaJ7.0018_h), (CaJ7.0018_t, CaJ7.0015_t), (CaJ7.0015_h, CaJ7.0017_t), (CaJ7.0017_h) }
+2.:  { (CaJ7.0001_t), (CaJ7.0001_h, CaJ7.0003_t), (CaJ7.0003_h, CaJ7.0004_h), (CaJ7.0004_t, CaJ7.0005_t), (CaJ7.0005_h, CaJ7.0007_t), (CaJ7.0007_h, CaJ7.0013_h), (CaJ7.0013_t, CaJ7.0011_t), (CaJ7.0011_h, CaJ7.0018_h), (CaJ7.0018_t, CaJ7.0015_t), (CaJ7.0015_h, CaJ7.0017_t), (CaJ7.0017_h) }   ,   { (CaJ7.0009_h, CaJ7.0009_t),  }
+3.:  { (CaJ7.0001_t), (CaJ7.0001_h, CaJ7.0003_t), (CaJ7.0003_h, CaJ7.0004_h), (CaJ7.0004_t, CaJ7.0005_t), (CaJ7.0005_h, CaJ7.0007_t), (CaJ7.0007_h, CaJ7.0009_t), (CaJ7.0009_h, CaJ7.0013_h), (CaJ7.0013_t, CaJ7.0011_t), (CaJ7.0011_h, CaJ7.0018_h), (CaJ7.0018_t, CaJ7.0015_t), (CaJ7.0015_h, CaJ7.0017_t), (CaJ7.0017_h) }
+4.:  { (CaJ7.0001_t), (CaJ7.0001_h, CaJ7.0003_t), (CaJ7.0003_h, CaJ7.0004_h), (CaJ7.0004_t, CaJ7.0005_t), (CaJ7.0005_h, CaJ7.0007_t), (CaJ7.0007_h, CaJ7.0009_t), (CaJ7.0009_h, CaJ7.0011_t), (CaJ7.0011_h, CaJ7.0018_h), (CaJ7.0018_t, CaJ7.0015_t), (CaJ7.0015_h, CaJ7.0017_t), (CaJ7.0017_h) }   ,   { (CaJ7.0013_h, CaJ7.0013_t),  }
+5.:  { (CaJ7.0001_t), (CaJ7.0001_h, CaJ7.0003_t), (CaJ7.0003_h, CaJ7.0004_h), (CaJ7.0004_t, CaJ7.0005_t), (CaJ7.0005_h, CaJ7.0007_t), (CaJ7.0007_h, CaJ7.0009_t), (CaJ7.0009_h, CaJ7.0011_t), (CaJ7.0011_h, CaJ7.0013_t), (CaJ7.0013_h, CaJ7.0018_h), (CaJ7.0018_t, CaJ7.0015_t), (CaJ7.0015_h, CaJ7.0017_t), (CaJ7.0017_h) }
+6.:  { (CaJ7.0001_t), (CaJ7.0001_h, CaJ7.0003_t), (CaJ7.0003_h, CaJ7.0004_h), (CaJ7.0004_t, CaJ7.0005_t), (CaJ7.0005_h, CaJ7.0007_t), (CaJ7.0007_h, CaJ7.0009_t), (CaJ7.0009_h, CaJ7.0011_t), (CaJ7.0011_h, CaJ7.0013_t), (CaJ7.0013_h, CaJ7.0015_t), (CaJ7.0015_h, CaJ7.0017_t), (CaJ7.0017_h) }   ,   { (CaJ7.0018_t, CaJ7.0018_h),  }
+7.:  { (CaJ7.0001_t), (CaJ7.0001_h, CaJ7.0003_t), (CaJ7.0003_h, CaJ7.0004_h), (CaJ7.0004_t, CaJ7.0005_t), (CaJ7.0005_h, CaJ7.0007_t), (CaJ7.0007_h, CaJ7.0009_t), (CaJ7.0009_h, CaJ7.0011_t), (CaJ7.0011_h, CaJ7.0013_t), (CaJ7.0013_h, CaJ7.0015_t), (CaJ7.0015_h, CaJ7.0017_h), (CaJ7.0017_t) }   ,   { (CaJ7.0018_t, CaJ7.0018_h),  }
+8.:  { (CaJ7.0001_t), (CaJ7.0001_h, CaJ7.0003_t), (CaJ7.0003_h, CaJ7.0004_h), (CaJ7.0004_t, CaJ7.0005_t), (CaJ7.0005_h, CaJ7.0007_t), (CaJ7.0007_h, CaJ7.0009_t), (CaJ7.0009_h, CaJ7.0011_t), (CaJ7.0011_h, CaJ7.0013_t), (CaJ7.0013_h, CaJ7.0015_t), (CaJ7.0015_h, CaJ7.0017_h), (CaJ7.0017_t, CaJ7.0018_h), (CaJ7.0018_t) }
+
+
+DCJ distance comparisons as PHYLIP matrix:
+
+2
+Genome A  
+Genome B  8 
+

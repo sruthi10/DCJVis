@@ -1,0 +1,49 @@
+DCJ distance of the genomes "Genome A" & "Genome B" = 6
+DCJ sorting scenario of the genomes "Genome A" & "Genome B":
+0.:  DCC1 NFS1 -LEU2 | BUD3 GBP2 ) SGF29 YCL002 PGS1 | 
+1.:  DCC1 PGS1 | BUD3 GBP2 ) LEU2 -NFS1 -YCL002 -SGF29 | 
+2.:  DCC1 PGS1 ) BUD3 GBP2 ) LEU2 -NFS1 -YCL002 -SGF29 | 
+3.:  DCC1 BUD3 GBP2 PGS1 ) LEU2 -NFS1 -YCL002 -SGF29 | 
+4.:  LEU2 -BUD3 -DCC1 -PGS1 -GBP2 -NFS1 -YCL002 -SGF29 |
+5.:  NFS1 YCL002 SGF29 ) LEU2 -BUD3 -DCC1 -PGS1 -GBP2 |
+6.:  DCC1 GBP2 PGS1 ) BUD3 -LEU2 | NFS1 YCL002 SGF29 )
+This is only one of at least 64 sorting sequences.
+
+oNLY WILL PARSE TILL STEP 6
+0.: a c -d | b e ) H f g |
+1.: a g | b e ) d -c -f -H |
+2.: a g ) b e ) d -c -f -H |
+3.: a b e g ) d -c -f -H |
+4.: d -b -a -g -e -c -f -H |
+5.: c f H ) d -b -a -g -e |
+6.: a e g ) b -d | c f H )
+
+A -> DCC1
+C -> NFS1
+D -> LEU2
+B -> BUD3
+E -> GBP2
+H -> SGF29 (just created to equal the gene count)
+F -> YCL002
+G -> PGS1
+https://bibiserv.cebitec.uni-bielefeld.de/ceged%3bjsessionid=55d9a469111ae02c1ee30ec18d49?id=ceged_manual
+
+a c -d | b e ) f g |
+a g | b e ) d -c -f |
+a g ) b e ) d -c -f |
+a b e g ) d -c -f |
+d -b -a -g -e -c -f |
+c f ) d -b -a -g -e |
+a e g ) b -d | c f )
+
+DCJ-operations in the example: 
+Translocation
+Closure, 
+Fusion of two circular chromosomes,
+Fusion of linear and circular chromosome,
+Fission with closure,
+Fission with closure
+
+
+
+// This is modified output to display various feature of the DCJVis -> multi chromosome, different 

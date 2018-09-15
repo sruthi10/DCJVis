@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+</head>
+<body bgcolor="white">
+
+Provides for methods to use to layout and position any items along the sequence, and dividing up the map into different slots.
+
+<p>Implementing classes here can be used to create a new layout.  The important classes here are Backbone, SequencePath, LayoutFactory, and SlotRegion.</p>
+<p>Backbone is used to provide a way to translate points from cartesian coordinates (x,y) to coordinates on a sequence (base, height from center backbone ribbon).</p>
+<p>SequencePath is used to translate not just points, but curves from cartesian coordinates to sequence coordinates.  It is styled similar to the Java Path2D.
+It constructs curves out of segments provided gview.layout.prototype.segments.  These segments store the curve in terms of sequence coordinates, so that when zooming,
+a new "stretched" curve can be constructed.</p>
+<p>SlotRegion is simply used to store and provide access to all the layout-specific objects.  It is created with a LayoutFactory implementation.</p>
+<p>LayoutFactory is used to construct all the objects for a particular layout.  It will construct the Backbone object, as well as the SequencePath objects.</p>
+
+
+<h2>Package Specification</h2>
+<ul>
+  <li><a href=""></a>
+</ul>
+
+<h2>Related Documentation</h2>
+
+@see ca.corefacility.gview.layout.prototype.segments.StretchableSegment
+
+</body>
+</html>

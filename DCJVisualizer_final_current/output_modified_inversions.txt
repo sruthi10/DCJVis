@@ -1,0 +1,26 @@
+DCJ distance of the genomes "Genome A" & "Genome B" = 4
+DCJ sorting scenario of the genomes "Genome A" & "Genome B":
+0.:  DCC1 NFS1 LEU2 -BUD3 -GBP2 -SGF29 YCL002 -PGS1 | 
+1.:  DCC1 NFS1 -LEU2 -BUD3 -GBP2 -SGF29 YCL002 PGS1 | 
+2.:  DCC1 NFS1 -LEU2 -BUD3 -GBP2 SGF29 YCL002 -PGS1 | 
+3.:  DCC1 NFS1 -LEU2 -BUD3 -GBP2 SGF29 YCL002 PGS1 |  
+4.:  DCC1 NFS1 LEU2 BUD3 GBP2 SGF29 YCL002 PGS1 |  
+This is only one of at least 64 sorting sequences.
+
+
+DCJ sorting scenario of the genomes "Genome A" & "Genome B":
+0.:  { (DCC1_h), (DCC1_t, NFS1_h), (NFS1_t, LEU2_h), (LEU2_t, BUD3_t), (BUD3_h, GBP2_t), (GBP2_h, SGF29_t), (SGF29_h, YCL002_h), (YCL002_t, PGS1_t), (PGS1_h) }
+1.:  { (DCC1_h), (DCC1_t, NFS1_h), (NFS1_t, LEU2_t), (LEU2_h, BUD3_t), (BUD3_h, GBP2_t), (GBP2_h, SGF29_t), (SGF29_h, YCL002_h), (YCL002_t, PGS1_t), (PGS1_h) }
+2.:  { (BUD3_h, DCC1_h), (DCC1_t, NFS1_h), (NFS1_t, LEU2_t), (LEU2_h, BUD3_t), }   ,   { (GBP2_t), (GBP2_h, SGF29_t), (SGF29_h, YCL002_h), (YCL002_t, PGS1_t), (PGS1_h) }
+3.:  { (LEU2_h), (LEU2_t, NFS1_t), (NFS1_h, DCC1_t), (DCC1_h, BUD3_h), (BUD3_t, GBP2_t), (GBP2_h, SGF29_t), (SGF29_h, YCL002_h), (YCL002_t, PGS1_t), (PGS1_h) }
+4.:  { (LEU2_h), (LEU2_t, NFS1_t), (NFS1_h, DCC1_t), (DCC1_h, BUD3_h), (BUD3_t, GBP2_t), (GBP2_h, SGF29_t), (SGF29_h, PGS1_h), (PGS1_t, YCL002_t), (YCL002_h) }
+
+
+DCJ distance comparisons as PHYLIP matrix:
+
+2
+Genome A  
+Genome B  4 
+
+
+// This is modified output to display various feature of the DCJVis -> multi chromosome, different 

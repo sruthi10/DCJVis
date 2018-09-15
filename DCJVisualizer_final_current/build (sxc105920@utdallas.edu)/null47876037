@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.4
+Created-By: 1.8.0_77-b03 (Oracle Corporation)
+Codebase: D:\Box Sync\Final_Version_DCJ_ current\DCJVisualizer_final_c
+ urrent\dist
+Application-Library-Allowable-Codebase: D:\Box Sync\Final_Version_DCJ_
+  current\DCJVisualizer_final_current\dist
+Caller-Allowable-Codebase: D:\Box Sync\Final_Version_DCJ_ current\DCJV
+ isualizer_final_current\dist
+Permissions: all-permissions
+Application-Name: DCJVisualizer_final_current
+

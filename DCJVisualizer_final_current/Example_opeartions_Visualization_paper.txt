@@ -1,0 +1,17 @@
+https://bibiserv.cebitec.uni-bielefeld.de/ceged%3bjsessionid=55d9a469111ae02c1ee30ec18d49?id=ceged_manual
+
+a c -d | b e ) f g |
+a g | b e ) d -c -f |
+a g ) b e ) d -c -f |
+a b e g ) d -c -f |
+d -b -a -g -e -c -f |
+c f ) d -b -a -g -e |
+a e g ) b -d | c f )
+
+DCJ-operations in the example: 
+Translocation
+Closure, 
+Fusion of two circular chromosomes,
+Fusion of linear and circular chromosome,
+Fission with closure,
+Fission with closure

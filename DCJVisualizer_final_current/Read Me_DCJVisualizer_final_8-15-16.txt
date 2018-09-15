@@ -1,0 +1,207 @@
+testing with test2c(source outer) to test1c(target inner)
+
+Use the input file in DCJ_Test not within each folder
+test1c
+-gene=CaJ7.0001(97..1155)   -gene=CaJ7.0003(1246..2040)  gene=CaJ7.0004(2278..2769)  -gene=CaJ7.0005 (2747..3421) -gene=CaJ7.0007(3464..5761)  -gene=CaJ7.0009 (5799..6467) -gene=CaJ7.0011(6523..7476)  -gene=CaJ7.0013 (7583..9136)  -gene=CaJ7.0015(10024..13080)  gene=CaJ7.0017 (14047..15825) gene=CaJ7.0018 (15982..16086,16147..16662)
+
+test2c
+-gene=CaJ7.0001(97..1155)  gene=CaJ7.0003(1246..2040)  -gene=CaJ7.0009(2140..2808)  gene=CaJ7.0004 (3058..3549) -gene=CaJ7.0005 (3769..4443) -gene=CaJ7.0007(4769..7066)  gene=CaJ7.0013 (7186..8739) -gene=CaJ7.0011(8804..9757)  gene=CaJ7.0018 (9947..10051,10112..10627) -gene=CaJ7.0015(10967..14023)  -gene=CaJ7.0017(14346..16124)
+
+8_16_2016 --> we have full circle but the discripence between initial and step 0 is there. 
+Step0 the source genome gene index are changed to match with target genome genes in the given order. (WRONG)
+
+8_8_16 --> arc is there to represent but shows, but gene coordinates in source and target genome are kept as provided by the input file
+step0 and Initial have same diagram.
+
+8_15_16 --> resulted with same step0 and initial so using this one a starting point to solve problem ( of step0 and initial mismatch) --> now correct to have circle rather than arch. Using Beyond compare between 8_15_16 and 8_16_16 there is difference in GeneData.java( which major change in finding the total length) and StepsDisplay.java(removed *2 replaced with total length to get the full circle instead of arch)
+
+Another problem: step2--> step3 (see output_8_15_step2_3... image) . gene 9 should be placed in between gene 7 and 13 but place 09 --> 7 --> 13 also the base pairs of gene 9 changed replaced with gene 7 location points. then
+
+Even from step1 --> step2 . once the gene 9 removed to form separate chromosome .gene 9 is given the corrdinate match the 1st gene in the linear chrosomome (inner layer) then in the chromosome in the inner layer the gene after 9 got the coordinates of gene9 then GENE coordinates are passed down to next one...  the last gene the inner layer chromosome is 17 and should have (14346...16124),but it is replaced by the gene infront of it which 15 coordinates 10967..14023.  
+(after removing the gene9 ---> the gene9 coordinates to next gene --> next gene ... last gene coordinate were just not considered) --> need to just work out how total length is being calculated 
+
+GeneData.java 
+8_15_16 to 8_16_16
+
+location1[i] = gene.Location1;
+location2[i] = gene.Location2;
+
+moved these above statement from for loop of SOURCE to  for loop of TARGET
+
+CHANGES to 8_15_16 to give full circle for genomes rather than arch
+GeneData.java:
+changes line 160  replaced with 161 SymbolList blankList = new BlankSymbolList(totalLength);
+changed the way to find total length by comment out line 92 and place line 99  totalLength = Math.abs(temp.get(0).Location1 - temp.get(temp.size()-1).Location2); 
+
+StepsDisplay.java:
+changes line 123 with line 124
+ //SymbolList blankList = new BlankSymbolList(totalLength * 2); //different from 8_16
+  SymbolList blankList = new BlankSymbolList(totalLength);
+  
+NOW between 8_15 and 8_16 code the only difference is 
+where this below two lines placed in GeneData.java in the source or target for loop in createSourceMap() method
+location1[i] = gene.Location1;
+location2[i] = gene.Location2;
+
+
+C:\Users\sxc105920\Desktop\DCJ_Test\Final_Version_DCJ_ 8_15_16  is now current and same as Final_Version_DCJ in C:\Users\sxc105920\Box Sync\BioInformatics Research\Final_Version_DCJ
+
+Except for the position of 
+location1[i] = gene.Location1;
+location2[i] = gene.Location2;
+
+
+The problem with GRAY circle for Circular chromosome: check DISPLAYSTYLE.java line 126
+ToolTip fixed to show both Genename and Coordinates: LocationExtractor.java --> extract Text(feature)
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+10/27/2016
+output for this version for test2c-test1c see final_8_15_test2c_test1c_pic1 and final_8_15_test2c_test1c_pic2 under C:\Users\sxc105920\Box Sync\BioInformatics Research\Versions_ DCJ _Visualizer\DCJ_Test
+
+Previous: version to refer to will be C:\Users\sxc105920\Box Sync\BioInformatics Research\Versions_ DCJ _Visualizer\DCJ_Test_10_16\Final_Version_DCJ_ 8_15_16_correct_10_17 (email also)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+10/28/2016  Final_Version_DCJ_ 
+
+Problem with parsing in (step.java) between ) and |.
+fixed some code    public String[] setChromosome(String line) 
+getting null pointer exception
+
+next to fix the locaiton problem: just commented on line181 (Genedata.java) where recursive method to keep the matching between the name and size of each feature 
+
+Name of project used from now on is 
+C:\Users\sxc105920\Desktop\DCJ_Test\Final_Version_DCJ_current
+-----------------
+10/29/2016
+
+C:\Users\sxc105920\Desktop\DCJ_Test\Final_Version_DCJ_10_29_2016
+tried to use the indexing to create the changes for fusion and fission but didn't work for the both cases at ones using as we are not able to caputre the previous indexing
+
+C:\Users\sxc105920\Desktop\DCJ_Test\Final_Version_DCJ_current updated to reflect both 
+by eliminating the spaces and just considering the genes location by the number chromosomes formed and placed it matching with earlier postion.
+
+To Do
+1) parsing should be correct to manage for all cases of steps result wiht multiple )) cirular and linear || or combination of both
+2) create the gaps in the source genomes by using the static values based on the target genomes gaps (inner circle)
+3) create complete circle for any fission resulted in circulrization . this way if no gray arc is shown then it is linear and if it is showns then circular 
+
+ISSUES:
+from Cerevisea to albicans
+there is overlap between genes in the outer later in step 0 
+
+---------------
+10/31 and 11/21
+correct parser
+found issue with input C.albicans gene NFS1 orientation (should be tail to head (-complementary) )is wrong as h to t  ( which resulted with all genes orientation is listed incorrectly with head and tail alternated)
+
+updating/checking input files --> for now on the input files both test and sample data set will be in C:\Users\sxc105920\Box Sync\BioInformatics Research\Versions_ DCJ _Visualizer\Input-data-(papers-folder)
+
+11/14
+correct the parser
+Also, change the input reading based on file extension--> such that program is compatable with both .txt (just list of genes) and fasta file
+
+
+Debugging to check the files in(Input_output folder) --> to correct code 
+Looked at the DCJ_UniMoG-Global_July27 MainFrame.java line 789 for the file input
+
+Just directly go to Output_parser.java --> uncomment the main method
+
+-------------------------------------
+Check the Target genome gene names ( they just showed up as ANY rather than specific name)
+to check if it working correctly just replace step.java with old verison
+
+Parser() and then store the changed genes names in a array --> which will help with focus
+
+Multimap (Gauva by google) to store duplicate keys and values
+ Map<Character, List<Integer>> map works same as Multimap to hold duplicates keys and values
+ map.get(key).add(value);
+ 
+ both values don't work because 1 keys --> list of values
+ correct order of where key occured ( ) or | ) isn't stored in order, so it will be not work for us to parse 
+ 
+ multimap: doesn't work as it sorts the keys and values, which will make it hard to parse in the order which they occured in given text
+
+ ----------------------------------------------------
+ 12/3/2016
+ Just create Arraylist<String> and find the occurence and store the string wiht "index occured + Character" (eg. 15) 28|)
+ 
+ (not used) we can still use the map to keys occured, we can check if there are both ) & | present in given step or just 1 type occured
+ by checking number of keys in the given map.
+ 
+ use to boolean variable linear and circular --> to keep track if | and ) occured in the 
+ if (linear and circular == both true)
+ {
+ //use new way
+ }
+ else
+ {
+  // which type occured 
+  then use step_old code to return the sorted chromosome
+ }
+ 
+ //parser is fixed
+ 
+ ---
+ NEED TO CORRECT
+ Step1 --> the gene size not displayed according to the scale given in kbp
+ GBP2 (14027,15701) is displayed between 0 kbps and 1kbps
+ 
+ changedGenes<> method created, working and shows changed
+ 
+ to check completeness of changedGenes<> --> choose a simple scenario and show results
+ DCJVisualizer_final_12_4_2016 --> with corrected parser, changedGenes
+ 
+ ---------------------------------------------------------------
+ 1/1/2017
+ created output_modified.txt --> with steps of 1st scenario of rearrangment with easy operations rather the hard to see 2nd step with program (output.txt)
+ 
+ For this --> change made in FileOpenDialog.java doBuild() with changing the outputfile variable after returned the call with
+  output_file_path = "C:\\Users\\chapp\\Box Sync\\Final_Version_DCJ_ current\\DCJVisualizer_final_Current\\output_modified.txt";
+           now 4 steps occurs --> inversion, fission, fusion, inversion
+ 
+ To display all the operation --> inversion, fission, fusion, translocation and transposition   https://bibiserv.cebitec.uni-bielefeld.de/ceged%3bjsessionid=55d9a469111ae02c1ee30ec18d49?id=ceged_manual
+ got a sample example --> stored as output_modified1.txt (Example_opeartions_Visualization_paper.txt under DCJ_final_current) 
+      --> this shows the translocation , fission with closure(circulration)...
+	  
+	  
+	  WHEN RAN IT SHOWED ERROR BECAUSE 1 LESS GENE COUNT and more steps --> added a gene h 
+	  
+	  problem again --> as the names of gene didn't match with already stored in size bp . so just changed the gene names with names given with fasta input
+	  file:
+	  0.: a c -d | b e ) H f g |  --> 0.:  DCC1 NFS1 -LEU2 | BUD3 GBP2 ) SGF29 YCL002 PGS1 | 
+	  as there are 6 steps to complete rearrangment change the first line to: DCJ distance of the genomes "Genome A" & "Genome B" = 6
+	  6 --> is read to create 6 screens
+	  
+1/17/2017
+color assignment for each gene is done in GeneData.java using Color[]cols and Map<S,C> colorMap  and variable --> line 146 and 154 fs.setPaint(colorMap.get(items.get(0).getFeature().getSource()));
+
+In method createSourceMap based on number of genes in source --> we get that many distiguished color : 
+	   cols[i] = Color.getHSBColor((float) i / totalfeature, 1, 1);  --> (hue,saturation,brightness) each parameter 0.0 to 1.0 --> based on RGB we can create ~16.8 million colors 
+
+
+5/23/2017
+
+For the figures for the paper, we used output_modified.txt(rather than output.txt) becuase the step1 sequence operation on sample data is complicated version of inversion.
+
+//output_file_path --> use output_modified for scenario1 for paper
+            output_file_path = "C:\\Users\\chapp\\Box Sync\\Final_Version_DCJ_ current\\DCJVisualizer_final_Current\\output.txt";
+
+output.txt is auto generated file for any input given in the dialogbox. This file is read to provide the visualization in  FILEOPENDIALOG() 
+
+7/4/2017
+Updating http://utdallas.edu/~sxc105920/DCJVis/home.html
+Did:
+1) updated images and text description
+2) working on demo 
+Trying to create jar file and update on public_html
+Web-start, Jar -->  https://netbeans.org/kb/docs/java/javase-deploy.html#javaws
+There is error to run Jar from website --> classnot found
+
+1) one solution : try to zip all the jars and DCJVisualizer_final_Current.jar together
+2) two solution : Java Web-Start...
+Problem: 
+1)how to point the input files  --> trying to putting in current directory. check how to set-up directory
+2)Unable to launch Web-Start --> showed java security and pop up error. 
+3)new error "Couldn't find properties file /META-INF/gview.properties" in NEtbeans (I zipped folder and in unzipped folder I deleted images folder)
+4)

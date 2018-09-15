@@ -1,0 +1,17 @@
+>Genome A
+1 2 -3 4 5 6 | 7 9 -10 11 -12 13 -14 15 -8 16 | 17 -18 19 )
+
+>Genome B
+1 2 3 4 5 6 | 7 8 9 10 11 12 13 14 15 16 | 17 18 19 )
+
+>Genome C
+gene1 gene6 gene9 -gene5 -gene4 | -gene3 -gene2 gene7 gene8 |
+
+>Genome D
+gene1 -gene2 gene6 gene7 gene3 | gene4 gene5 -gene9 gene8 |
+
+>Genome E
+gene1 gene5 -gene6 gene9 -gene4 |
+
+//The inversion distance can only be calculated for genomes C & E, because all other genomes have 
+//more than one chromosome in common

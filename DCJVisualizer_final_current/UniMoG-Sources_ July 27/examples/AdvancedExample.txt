@@ -1,0 +1,31 @@
+this is ignored as a comment...
+>Man 
+1 2 3 4 5 | 6 7 8 9 10 11 12 | 13 14 15 | 16 17 |
+
+>Chimp 
+1 -4 2 3 5 7 6 8 | -17 -14 -15 -13 -11 -12 -10 16 -9 |
+>Horse
+1 2 3 4 5 6 7 8 | 9 10 11 12 13 14 15 16 17 |
+>Cat 
+2 1 3 5 4 | 6 7 -11 -9 -10 -8 12 16 | 15 14 -13 17 )
+>Dog
+13 17 -14 15 )
+
+>Robot
+these genes will be ignored, they only occur in this genome gene1 gene2 gene3 4 gene4 | 
+//the single "4" results in a distance of 0!
+
+>Rambo
+-gene4 gene3 gene2 -gene1 |
+
+//another comment: input can also be written like for the mouse example
+>Mouse 
+1 
+-2 
+3 
+8 
+4 
+-5 
+6 
+//and also mixed syntax in one genome is possible
+| 7 9 -10 11 -12 13 14 -15 16 | 
