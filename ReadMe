@@ -1,0 +1,10 @@
+Updated version of the code is loaded into gitlab. 
+
+This version code works well for the genes <10
+
+Updated code 5/11/19:
+- Changed color assignment to proivde distiction between genes clearly
+- Modified the Genedata datastructure to LinkedHashMap to HashMap to accept >10 genes
+- Added Message box to show which genome is target and source and the genome position in the visualization circle
+- Tried to modify code to write image to file (ImageWriter in DisplayStyle and GeneData classes
+
